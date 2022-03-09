@@ -1,0 +1,4 @@
+theme: jekyll-theme-cayman
+title: RobotizedLogisticsSystem
+titles_from_headings:
+  enabled: false
