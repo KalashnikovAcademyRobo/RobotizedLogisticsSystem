@@ -1,4 +1,5 @@
 theme: jekyll-theme-cayman
 title: RobotizedLogisticsSystem
+baseurl: /RobotizedLogisticsSystem
 titles_from_headings:
   enabled: false
