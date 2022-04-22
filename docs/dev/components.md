@@ -4,6 +4,6 @@ title: Компоненты
 description: Собери их все!
 ---
 
-[Начало](/RobotizedLogisticsSystem/dev) | Компоненты
+{% include dev/navigation.md page="components" %}
 
-<img style="height: 400px; width: 100%;" src="/RobotizedLogisticsSystem/media/component_diagram.png">
+<img style="width: 100%;" src="/RobotizedLogisticsSystem/media/component_diagram.png">
