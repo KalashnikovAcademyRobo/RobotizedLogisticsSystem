@@ -44,7 +44,7 @@ stateDiagram-v2
 
 # Команды
 
-Команды следуют правилам, описанным [здесь](/RobotizedLogisticsSystem/dev/commands/).
+Команды следуют правилам, описанным [здесь](/RobotizedLogisticsSystem/dev/commands).
 
 ## Команды робота
 
