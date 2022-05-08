@@ -1,20 +1,25 @@
 [versions]
 kotlinVersion = '1.6.10'
-ktorVersion = '1.6.7'
+ktorVersion = '2.0.1'
 daggerVersion = '2.41'
 exposedVersion = '0.38.1'
 
 [libraries]
 kotlinx-serialization-json = { module = 'org.jetbrains.kotlinx:kotlinx-serialization-json', version = '1.3.2' }
 
-ktor-serialization = { module = 'io.ktor:ktor-serialization', version.ref = 'ktorVersion' }
+ktor-serialization-kotlinx-json = { module = 'io.ktor:ktor-serialization-kotlinx-json', version.ref = 'ktorVersion' }
 ktor-server-core = { module = 'io.ktor:ktor-server-core', version.ref = 'ktorVersion' }
 ktor-server-netty = { module = 'io.ktor:ktor-server-netty', version.ref = 'ktorVersion' }
-ktor-auth = { module = 'io.ktor:ktor-auth', version.ref = 'ktorVersion' }
-ktor-auth-jwt = { module = 'io.ktor:ktor-auth-jwt', version.ref = 'ktorVersion' }
+ktor-server-content-negotiation = { module = 'io.ktor:ktor-server-content-negotiation', version.ref = 'ktorVersion' }
+ktor-server-compression = { module = 'io.ktor:ktor-server-compression', version.ref = 'ktorVersion' }
+ktor-server-status-pages = { module = 'io.ktor:ktor-server-status-pages', version.ref = 'ktorVersion' }
+ktor-server-call-logging = { module = 'io.ktor:ktor-server-call-logging', version.ref = 'ktorVersion' }
+ktor-server-auth = { module = 'io.ktor:ktor-server-auth', version.ref = 'ktorVersion' }
+ktor-server-auth-jwt = { module = 'io.ktor:ktor-server-auth-jwt', version.ref = 'ktorVersion' }
 
 exposed-core = { module = 'org.jetbrains.exposed:exposed-core', version.ref = 'exposedVersion' }
 exposed-jdbc = { module = 'org.jetbrains.exposed:exposed-jdbc', version.ref = 'exposedVersion' }
+exposed-dao = { module = 'org.jetbrains.exposed:exposed-dao', version.ref = 'exposedVersion' }
 sqlite-jdbc = { module = 'org.xerial:sqlite-jdbc', version = '3.30.1' }
 
 dagger = { module = 'com.google.dagger:dagger', version.ref = 'daggerVersion' }
@@ -24,9 +29,19 @@ logback = { module = 'ch.qos.logback:logback-classic', version = '1.2.11' }
 janino = { module = 'org.codehaus.janino:janino', version = '3.1.6' }
 
 [bundles]
-ktor = ['ktor-serialization', 'ktor-server-core', 'ktor-server-netty', 'ktor-auth', 'ktor-auth-jwt']
-exposed = ['exposed-core', 'exposed-jdbc', 'sqlite-jdbc']
+exposed = ['exposed-core', 'exposed-jdbc', 'exposed-dao', 'sqlite-jdbc']
 logback = ['logback', 'janino']
+ktor = [
+    'ktor-serialization-kotlinx-json',
+    'ktor-server-core',
+    'ktor-server-netty',
+    'ktor-server-content-negotiation',
+    'ktor-server-compression',
+    'ktor-server-status-pages',
+    'ktor-server-call-logging',
+    'ktor-server-auth',
+    'ktor-server-auth-jwt'
+]
 
 [plugins]
 kotlin-jvm = { id = 'org.jetbrains.kotlin.jvm', version.ref = 'kotlinVersion' }

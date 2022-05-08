@@ -4,10 +4,10 @@ import academy.kalashnikov.control.domain.auth.JwtDataSource
 import academy.kalashnikov.control.presentation.core.delegates.ApplicationDelegate
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
-import io.ktor.application.Application
-import io.ktor.application.install
-import io.ktor.auth.Authentication
-import io.ktor.auth.jwt.jwt
+import io.ktor.server.application.Application
+import io.ktor.server.application.install
+import io.ktor.server.auth.Authentication
+import io.ktor.server.auth.jwt.jwt
 import javax.inject.Inject
 
 const val AUTH_NAME = "auth_jwt"

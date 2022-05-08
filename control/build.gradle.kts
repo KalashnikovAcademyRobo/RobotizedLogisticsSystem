@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 group = "kalashnikov.academy"
 version = "0.1"
 
@@ -29,3 +31,10 @@ sourceSets.main {
 }
 
 application.mainClass.set("academy.kalashnikov.control.ApplicationKt")
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs = freeCompilerArgs.plus("-opt-in=kotlin.RequiresOptIn")
+    }
+}

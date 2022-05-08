@@ -2,7 +2,7 @@ package academy.kalashnikov.control.data.auth
 
 import academy.kalashnikov.control.domain.auth.JwtData
 import academy.kalashnikov.control.domain.auth.JwtDataSource
-import io.ktor.application.Application
+import io.ktor.server.application.Application
 import javax.inject.Inject
 
 private const val JWT_PROPERTY_PREFIX = "jwt."
