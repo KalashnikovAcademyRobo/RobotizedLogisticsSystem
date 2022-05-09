@@ -7,8 +7,8 @@ import academy.kalashnikov.control.domain.core.DispatchersProvider
 import academy.kalashnikov.control.presentation.auth.JwtValidator
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
-import io.ktor.auth.jwt.JWTCredential
-import io.ktor.auth.jwt.JWTPrincipal
+import io.ktor.server.auth.jwt.JWTCredential
+import io.ktor.server.auth.jwt.JWTPrincipal
 import java.util.Date
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject

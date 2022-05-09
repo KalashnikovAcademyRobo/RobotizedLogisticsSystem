@@ -7,7 +7,7 @@ import academy.kalashnikov.control.presentation.core.delegates.ApplicationDelega
 import academy.kalashnikov.control.presentation.core.delegates.ApplicationDelegatesModule
 import dagger.BindsInstance
 import dagger.Component
-import io.ktor.application.Application
+import io.ktor.server.application.Application
 import javax.inject.Singleton
 
 @Singleton
