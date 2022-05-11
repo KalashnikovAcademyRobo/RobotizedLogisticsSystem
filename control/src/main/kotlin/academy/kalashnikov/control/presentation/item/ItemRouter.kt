@@ -21,7 +21,7 @@ class ItemRouter @Inject constructor(
     override fun onApplicationReady() {
         application.routing {
             get("client/items") { getClientItems(this) }
-            post("warehouse/items/new", ::upsertItem)
+            post("warehouse/item", ::upsertItem)
         }
     }
 
