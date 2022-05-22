@@ -2,6 +2,7 @@ package academy.kalashnikov.control.data.core.database
 
 import academy.kalashnikov.control.data.item.ItemTable
 import academy.kalashnikov.control.data.order.OrderTable
+import academy.kalashnikov.control.data.robot.RobotTable
 import academy.kalashnikov.control.data.status.OrderStatusEntity
 import academy.kalashnikov.control.data.status.OrderStatusTable
 import academy.kalashnikov.control.domain.status.OrderStatus
@@ -35,7 +36,7 @@ class DatabaseInitializer @Inject constructor(
     }
 
     private fun createTables() {
-        SchemaUtils.create(ItemTable, OrderStatusTable, OrderTable)
+        SchemaUtils.create(ItemTable, OrderStatusTable, OrderTable, RobotTable)
     }
 
     private fun upsertStatuses() {

@@ -1,5 +1,5 @@
 package academy.kalashnikov.control.domain.auth
 
 interface JwtGenerator {
-    fun generate(id: String): String
+    suspend fun generate(id: String, type: JwtType): String
 }

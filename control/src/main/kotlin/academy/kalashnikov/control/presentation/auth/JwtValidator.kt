@@ -7,4 +7,5 @@ import io.ktor.server.auth.jwt.JWTPrincipal
 interface JwtValidator {
     fun validate(credential: JWTCredential): JWTPrincipal?
     fun retrievePayload(jwtPrincipal: JWTPrincipal): JwtPayload
+    fun retrievePayload(jwt: String): JwtPayload?
 }
