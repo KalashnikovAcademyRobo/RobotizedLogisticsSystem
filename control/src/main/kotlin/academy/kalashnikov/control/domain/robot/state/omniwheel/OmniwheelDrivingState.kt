@@ -3,6 +3,7 @@ package academy.kalashnikov.control.domain.robot.state.omniwheel
 import academy.kalashnikov.control.domain.core.communication.Communication
 import academy.kalashnikov.control.domain.core.geometry.angleTo
 import academy.kalashnikov.control.domain.core.geometry.distanceTo
+import academy.kalashnikov.control.domain.core.geometry.inDegrees
 import academy.kalashnikov.control.domain.core.geometry.modAbsolutePi
 import academy.kalashnikov.control.domain.core.navigation.Destination
 import academy.kalashnikov.control.domain.robot.state.RobotState
@@ -16,6 +17,7 @@ import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.takeWhile
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.selects.select
+import kotlin.math.roundToLong
 
 private const val STOP_DISTANCE = 0.5
 
@@ -50,6 +52,8 @@ class OmniwheelDrivingState @AssistedInject constructor(
                     .angleTo(destination.location)
                     .minus(it.rotation)
                     .modAbsolutePi()
+                    .inDegrees()
+                    .roundToLong()
                 communication.send("turn $angle")
             }
     }
