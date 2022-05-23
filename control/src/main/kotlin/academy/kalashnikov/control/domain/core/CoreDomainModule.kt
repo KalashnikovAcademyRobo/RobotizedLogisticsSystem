@@ -4,7 +4,7 @@ import dagger.Binds
 import dagger.Module
 import javax.inject.Singleton
 
-@Module
+@Module(subcomponents = [RobotComponent::class])
 interface CoreDomainModule {
     @Binds
     @Singleton

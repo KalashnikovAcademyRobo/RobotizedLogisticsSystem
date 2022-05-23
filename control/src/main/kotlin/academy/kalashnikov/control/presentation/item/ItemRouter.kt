@@ -1,6 +1,6 @@
 package academy.kalashnikov.control.presentation.item
 
-import academy.kalashnikov.control.domain.core.DefaultContext
+import academy.kalashnikov.control.presentation.core.DefaultContext
 import academy.kalashnikov.control.domain.item.Item
 import academy.kalashnikov.control.domain.item.ItemSource
 import academy.kalashnikov.control.presentation.core.delegates.ApplicationDelegate
